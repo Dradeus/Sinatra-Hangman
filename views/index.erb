@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hangman</title>
+	</head>
+	<body>
+	<h1>Welcome to Hangman!</h1>
+		<p>		
+			<% @show.each do |char| %>
+        <% if char == "" %>
+        				_
+        <% else %>
+        		<%= char %>
+        <% end %>
+			<% end %>
+		</p>
+		<form method="POST" action="/">
+			<label for="text">Input your guess here:</label>
+			<input type="text" name="guess" title="Input your guess" size="1">
+		</form>
+
+	</body>
+</html>
